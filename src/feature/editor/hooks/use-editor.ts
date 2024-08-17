@@ -35,8 +35,8 @@ export const useEditor = () => {
         height: 1200,
         name: "clip",
         fill: "white",
-        // selectable: false,
-        // hasControls: false,
+        selectable: false,
+        hasControls: false,
         shadow: new fabric.Shadow({
           color: "rgba(0,0,0,0.8)",
           blur: 5,

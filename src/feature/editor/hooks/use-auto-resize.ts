@@ -22,7 +22,7 @@ const zoomRatio = 0.85
 const localWorkspace = canvas.getObjects().find((object)=> object.name === "clip")
 
 // @ts-ignore
-const scale = fabric.util.findScaleTofit(localWorkspace, {
+const scale = fabric.util.findScaleToFit(localWorkspace, {
     width: width,
     height: height
 });
@@ -61,6 +61,7 @@ useEffect(()=> {
     if(canvas && container){
         resizeObserver = new ResizeObserver(()=> {
             autoZoom()
+            console.log("resizing")
         })
         resizeObserver.observe(container)
     }
